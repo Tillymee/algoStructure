@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Euklid {
 
   public static Integer getEuklid(int a, int b) {
@@ -12,7 +14,18 @@ public class Euklid {
   }
 
   public static void main(String[] args) {
-    System.out.println("8,3: " + Euklid.getEuklid(555, 444).toString());
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter first number: ");
+    int a = sc.nextInt();
+
+    System.out.println("Enter second number: ");
+    int b = sc.nextInt();
+
+    System.out.println("GCD of " + a + " and " + b + ": " + Euklid.getEuklid(a, b).toString());
+
+    sc.close();
+
   }
 }
 
