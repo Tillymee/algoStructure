@@ -1,3 +1,5 @@
+package Lerneinheit2;
+
 import java.util.Scanner;
 
 public class GaussSum {

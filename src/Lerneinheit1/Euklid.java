@@ -1,3 +1,5 @@
+package Lerneinheit1;
+
 import java.util.Scanner;
 
 public class Euklid {
