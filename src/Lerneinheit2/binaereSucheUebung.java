@@ -72,4 +72,4 @@ public class binaereSucheUebung {
         // Wenn der Suchschlüssel nicht gefunden wurde
         return -1;
     }
-}
+} Hi
