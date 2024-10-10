@@ -31,5 +31,7 @@ public class MaxValue {
 
         int indexOfMax = findMaximum(array);
         System.out.println("Der Index des Maximums ist: " + indexOfMax);
+
+        scanner.close();
     }
 }

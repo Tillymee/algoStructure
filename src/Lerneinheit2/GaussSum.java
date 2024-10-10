@@ -16,5 +16,8 @@ public class GaussSum {
             sum += i; // sum = sum + i
         }
         System.out.println("Sum: " + sum);
+
+        input.close();
     }
+
 }
