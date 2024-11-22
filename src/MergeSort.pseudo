@@ -1,0 +1,21 @@
+MergeSort(A, left, right):
+  if left < right then
+    middle = (left + right) / 2
+    MergeSort(A, left, middle)
+    MergeSort(A, middle + 1, right)
+    merge(A, left, middle, right)
+  return A
+
+merge(A, left, middle, right):
+  L = A[left..middle]
+  R = A[middle+1..right]
+  i, j, k = 0
+  while i < length(L) and j < length(R) do
+    if L[i] <= R[j] then
+      A[k] = L[i]
+      i = i + 1
+    else
+      A[k] = R[j]
+      j = j + 1
+    k = k + 1
+  Kopiere restliche Elemente von L und R

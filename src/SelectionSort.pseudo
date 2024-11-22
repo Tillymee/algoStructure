@@ -1,0 +1,8 @@
+SelectionSort(A):
+  for i = 0 to length(A) - 2 do
+    min_index = i
+    for j = i + 1 to length(A) - 1 do
+      if A[j] < A[min_index] then
+        min_index = j
+    swap(A[i], A[min_index])
+  return A

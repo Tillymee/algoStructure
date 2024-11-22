@@ -1,0 +1,12 @@
+CountingSort(A):
+  k = max(A)
+  C = Array of length k + 1 with all elements 0
+  for i = 0 to length(A) - 1 do
+    C[A[i]] = C[A[i]] + 1
+  for j = 1 to k do
+    C[j] = C[j] + C[j - 1]
+  B = Array of length length(A)
+  for i = length(A) - 1 downto 0 do
+    B[C[A[i]] - 1] = A[i]
+    C[A[i]] = C[A[i]] - 1
+  return B

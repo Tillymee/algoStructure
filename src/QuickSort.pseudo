@@ -1,0 +1,16 @@
+QuickSort(A, left, right):
+  if left < right then
+    p = Partition(A, left, right)
+    QuickSort(A, left, p - 1)
+    QuickSort(A, p + 1, right)
+  return A
+
+Partition(A, left, right):
+  pivot = A[right]
+  i = left - 1
+  for j = left to right - 1 do
+    if A[j] <= pivot then
+      i = i + 1
+      swap(A[i], A[j])
+  swap(A[i + 1], A[right])
+  return i + 1
