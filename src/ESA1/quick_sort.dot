@@ -1,0 +1,24 @@
+digraph QuickSort {
+    rankdir=TB;
+    node [shape=box, style="rounded, filled", fillcolor=lightblue, fontname="Arial"];
+
+    "Start" [label="Start\n[13, 20, 7, 4, 17, 9, 15, 11]"];
+    "Step1_Left" [label="Left\n[7, 4, 9, 11]"];
+    "Step1_Right" [label="Right\n[20, 17, 15]"];
+    "Step2_Left" [label="Left\n[4]"];
+    "Step2_Right" [label="Right\n[7, 9, 11]"];
+    "Step3_Left" [label="Left\n[7]"];
+    "Step3_Right" [label="Right\n[11]"];
+    "Step4_Left" [label="Left\n[15]"];
+    "Step4_Right" [label="Right\n[20]"];
+
+    // Verbindungen
+    "Start" -> "Step1_Left" [label="Pivot: 13 ≤"];
+    "Start" -> "Step1_Right" [label="Pivot: 13 >"];
+    "Step1_Left" -> "Step2_Left" [label="Pivot: 9 ≤"];
+    "Step1_Left" -> "Step2_Right" [label="Pivot: 9 >"];
+    "Step2_Right" -> "Step3_Left" [label="Pivot: 7 ≤"];
+    "Step2_Right" -> "Step3_Right" [label="Pivot: 7 >"];
+    "Step1_Right" -> "Step4_Left" [label="Pivot: 17 ≤"];
+    "Step1_Right" -> "Step4_Right" [label="Pivot: 17 >"];
+}
